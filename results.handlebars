@@ -1,9 +1,9 @@
 <h3>Pokemon {{results.pageStart}} to {{results.pageEnd}}</h3>
-<ul>
+<ol start={{results.pageStart}}>
   {{#each results.items}}
     <li>{{this.name}}</li>
   {{/each}}
-</ul>
+</ol>
 <button class='webkite-pagination' data-webkite-page='first'>&lt;&lt;</button>
 <button class='webkite-pagination' data-webkite-page='prev'>&lt;</button>
 {{#repeat results.pages}}
