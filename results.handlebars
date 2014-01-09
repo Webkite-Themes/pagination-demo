@@ -1,6 +1,13 @@
-<h3>Pokemon {{multiply results.page results.per_page}} to {{add results.page results.per_page -1}}</h3>
+<h3>Pokemon {{results.pageStart}} to {{results.pageEnd}}</h3>
 <ul>
   {{#each results.items}}
     <li>{{this.name}}</li>
   {{/each}}
 </ul>
+<button class='webkite-pagination' data-webkite-page='first'>&lt;&lt;</button>
+<button class='webkite-pagination' data-webkite-page='prev'>&lt;</button>
+{{#repeat results.pages}}
+<button class='webkite-pagination' data-webkite-page={{this}}>{{this}}</button>
+{{/repeat}}
+<button class='webkite-pagination' data-webkite-page='next'>&gt;</button>
+<button class='webkite-pagination' data-webkite-page='last'>&gt;&gt;</button>
