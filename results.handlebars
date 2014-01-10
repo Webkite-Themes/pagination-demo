@@ -1,7 +1,7 @@
-<h3>Pokemon {{results.pagination.firstResult}} to {{results.pagination.lastResult}}</h3>
-<ol start={{results.pagination.firstResult}}>
-  {{#each results.items}}
+<h3>Pokemon {{pagination.firstResult}} to {{pagination.lastResult}}</h3>
+<ol start={{pagination.firstResult}}>
+  {{#each items}}
     <li>{{this.name}}</li>
   {{/each}}
 </ol>
-{{paginator results.pagination 5}}
+{{paginator pagination 5}}
