@@ -1,2 +1,4 @@
 templates:
   - results.handlebars
+partials:
+  - paginator.handlebars
